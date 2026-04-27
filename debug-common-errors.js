@@ -26,7 +26,7 @@ Think about which debugging methods you found most useful and how you might appl
 
 console.log("Welcome to the bootcamp
 
-// What’s Wrong?
+// What’s Wrong? There is a syntax error and the code should be, console.log("Welcome to the bootcamp") but it was missing the closing quotation and parenthesis.
 
 
 // Program B
@@ -39,7 +39,7 @@ for (let i = 0; i < numbers.length; i++) {
   console.log(doubled);
 }
 
-// What’s Wrong?
+// What’s Wrong? There is a runtime error because 8 is a string and not a number. Changing the first line of code to let numbers = [2, 4, 8]; fixes the error and prints the expected results to the console. 
 
 
 
@@ -59,4 +59,16 @@ function isPrime(num) {
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? The logic is wrong. The line that is supposed to indicate the number is not prime returns true instead of false and vice versa. The correct code is below.
+
+function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;  
+    }
+  }
+  return true; 
+}
+
+console.log(isPrime(12));
